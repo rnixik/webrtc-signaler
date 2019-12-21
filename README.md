@@ -28,12 +28,12 @@ sudo bash -c 'echo "127.0.0.1 webrtc.local signaler.local" >>/etc/hosts; echo ""
 const socket = io('https://signaler.local:8881');
 const myId = 'some-id'; // uuid or any other
 
-// Join to room
+// Join a room
 socket.on('connect', () => {
     socket.emit('room', JSON.stringify({ id: myId, room: 'some-room' }));
 });
 
-// When somebody joins to room
+// When somebody joins the room
 socket.on('new', (remoteId) => {
   // Send signaling data
   this.socket.emit('webrtc', JSON.stringify({ 
