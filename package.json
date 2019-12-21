@@ -1,0 +1,17 @@
+{
+  "name": "webrtc-signaler",
+  "version": "1.0.0",
+  "description": "A signaling server for WebRTC",
+  "main": "server.js",
+  "scripts": {
+    "dev": "HTTPS_CERT=./dev_certs/signaler.local.bundle.crt HTTPS_CERT_KEY=./dev_certs/signaler.local.key PORT=8881 node server.js",
+    "docker-build": "docker build -t rnix/webrtc-signaler ."
+  },
+  "keywords": [],
+  "author": "Roman Nix",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {}
+}

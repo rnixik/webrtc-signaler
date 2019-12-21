@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  signaler:
+    build:
+      context: ./
+
+    volumes:
+    - ./dev_certs/signaler.local.bundle.crt:/certs/cert.crt
+    - ./dev_certs/signaler.local.key:/certs/cert.key
+
+    environment:
+      HTTPS_CERT: "/certs/cert.crt"
+      HTTPS_CERT_KEY: "/certs/cert.key"
+
+    ports:
+    - 8881:443
