@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  signaler:
+    build:
+      context: ./
+
+    network_mode: bridge
+    restart: always
+
+    environment:
+      VIRTUAL_HOST: "signaler.getid.org"
+      LETSENCRYPT_HOST: "signaler.getid.org"
