@@ -5,9 +5,14 @@ services:
     build:
       context: ./
 
-    network_mode: bridge
+    networks:
+      - nginx-proxy
     restart: always
 
     environment:
       VIRTUAL_HOST: "signaler.getid.org"
       LETSENCRYPT_HOST: "signaler.getid.org"
+
+networks:
+  nginx-proxy:
+    external: true
