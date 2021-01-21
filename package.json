@@ -12,7 +12,7 @@
   "author": "Roman Nix",
   "license": "MIT",
   "dependencies": {
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   },
   "devDependencies": {}
 }
